@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "634045129261",
+    "firebase_url": "https://totanabusiness-2020.firebaseio.com",
+    "project_id": "totanabusiness-2020",
+    "storage_bucket": "totanabusiness-2020.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:634045129261:android:ec211db000d2195a4a8ea4",
+        "android_client_info": {
+          "package_name": "com.josetotana.totanabusiness"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "634045129261-tmmbd9sf4b29dtno4bmvnaujsnrhqk25.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBp25jdEvDeb9dX_DYxAwmKB1GATzRoJYU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "634045129261-tmmbd9sf4b29dtno4bmvnaujsnrhqk25.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
