@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.josetotana.totanabusiness">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
@@ -8,11 +11,16 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:ignore="AllowBackup">
+
         <activity
-            android:name=".ScrollingActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:name=".itemCard.ItemCardActivity"
+            android:parentActivityName=".categoryItems.SelectedItemActivity" />
+        <activity
+            android:name=".categoryItems.SelectedItemActivity"
+            android:parentActivityName=".categories.MainActivity" />
+        <activity android:name=".categories.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
