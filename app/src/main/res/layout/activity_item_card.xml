@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".itemCard.ItemCardActivity">
+
+        <ImageView
+            android:id="@+id/cardImage"
+            android:layout_width="230dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="5dp"
+            android:contentDescription="@string/business_image_description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/favIcon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="52dp"
+            android:contentDescription="@string/fav_icon_description"
+            app:layout_constraintStart_toEndOf="@+id/cardImage"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/mapMarkerColor" />
+
+        <View
+            android:id="@+id/borderView"
+            android:layout_width="match_parent"
+            android:layout_height="420dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rectangle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardImage" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/cardNameLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="@string/name_text"
+            android:inputType="none"
+            android:minWidth="100dp"
+            android:textIsSelectable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/borderView">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/cardName"
+                android:textSize="@dimen/font_size"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusable="false" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/cardAddressLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="@string/address_text"
+            android:minWidth="100dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardNameLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/cardAddress"
+                android:layout_width="match_parent"
+                android:textSize="@dimen/font_size"
+                android:layout_height="match_parent"
+                android:focusable="false" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/mapsButton"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/maps_button_text"
+            android:textColor="@android:color/primary_text_light"
+            app:icon="@drawable/maps_icon"
+            app:iconTint="@color/mapMarkerColor"
+            app:layout_constraintEnd_toEndOf="@+id/borderView"
+            app:layout_constraintStart_toStartOf="@+id/borderView"
+            app:layout_constraintTop_toBottomOf="@+id/cardAddressLayout" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/cardPhoneLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="@string/phone_text"
+            android:minWidth="100dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mapsButton"
+            app:startIconContentDescription="@string/phone_icon_description"
+            app:startIconDrawable="@drawable/phone_icon">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/cardPhone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:textSize="@dimen/font_size"
+                android:focusable="false"
+                tools:ignore="KeyboardInaccessibleWidget" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="@string/whatsapp_text"
+            android:minWidth="100dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardPhoneLayout"
+            app:startIconContentDescription="@string/whatsapp_icon_description"
+            app:startIconDrawable="@drawable/whatsapp_icon"
+            app:startIconTint="@color/colorWhatsapp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/cardWhatsapp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:focusable="false"
+                android:textSize="@dimen/font_size"
+                tools:ignore="KeyboardInaccessibleWidget" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

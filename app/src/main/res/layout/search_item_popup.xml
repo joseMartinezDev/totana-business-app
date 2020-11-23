@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:windowSoftInputMode="stateVisible">
+
+
+    <EditText
+        android:id="@+id/popupText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:hint="@string/emptySearchText"
+        android:focusableInTouchMode="true"
+        android:windowSoftInputMode="stateVisible"
+        android:importantForAutofill="no"
+        android:imeOptions="actionSend"
+        android:inputType="textCapSentences|textAutoCorrect" />
+
+    <Button
+        android:id="@+id/popupButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/searchButtonPopup" />
+</LinearLayout>
